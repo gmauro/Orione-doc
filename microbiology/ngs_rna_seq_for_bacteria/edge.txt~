@@ -1,0 +1,28 @@
+====
+EDGE
+====
+
+EDGE, **Estimated Degree of Gene Expression** is an efficient software system to **estimate gene expression levels in bacterial genomes** from RNA-seq data. EDGE uses **Bowtie2** for alignment and then estimates expression directly from the alignment results.
+
+EDGE includes routines to assign reads aligning to overlapping gene regions accurately. 15% or more of bacterial genes overlap other genes, making this a significant problem for bacterial RNA-seq, one that is generally ignored by programs designed for eukaryotic RNA-seq experiments.
+
+
+Details
+-------
+
+Input files with gene coordinates in ``ptt`` and ``rnt`` format can be retrieved with the **Get EDGE files** tool available in Galaxy, or downloaded from the Genome/Bacteria section of the **NCBI FTP repository**. EDGE accepts files in Sanger FASTQ format (Galaxy type ``fastqsanger``). Use the **FASTQ Groomer** to prepare your files.
+
+
+References
+----------
+
+**Questo è un link al paper che descrive EDGE-pro... è lo stesso programma installato su Galaxy, o si tratta di un'altra versione di EDGE?**
+
+| *EDGE-pro: Estimated Degree of Gene Expression in Prokaryotic Genomes*.
+| T. Magoc, D. Wood, and S.L. Salzberg.
+| Evolutionary Bioinformatics (2013) 9:127-136.
+| http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3603529/
+
+|
+|
+|

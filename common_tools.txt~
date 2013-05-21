@@ -1,0 +1,12 @@
+============
+Common tools
+============
+
+.. toctree::
+   
+   Get data <common_tools/get_data>
+   NGS: quality control <common_tools/ngs_quality_control>
+   NGS: manipulation <common_tools/ngs_manipulation>
+   NGS: mapping <common_tools/ngs_mapping>
+   NCBI BLAST+ <common_tools/ncbi_blast>
+

@@ -1,0 +1,10 @@
+=====================
+NGS: de novo assembly
+=====================
+
+
+.. toctree::
+   
+   Velvet <ngs_de_novo_assembly/velvet>
+   ABySS <ngs_de_novo_assembly/abyss>
+   Edena <ngs_de_novo_assembly/edena>

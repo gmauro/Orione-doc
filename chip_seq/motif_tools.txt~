@@ -1,0 +1,10 @@
+===========
+Motif tools
+===========
+
+.. toctree::
+   
+   MEME <motif_tools/meme>
+   FIMO <motif_tools/fimo>
+   Sequence logo <motif_tools/sequence_logo>
+

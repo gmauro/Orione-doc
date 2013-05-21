@@ -1,0 +1,84 @@
+===============
+NGS: GATK tools
+===============
+
+
+*ALIGNMENT UTILITIES*
+
+**Depth of Coverage**
+  processes a set of bam files to determine coverage at different levels of partitioning and aggregation. Coverage can be analyzed per locus, per interval, per gene, or in total; can be partitioned by sample, by read group, by technology, by center, or by library; and can be summarized by mean, median, quartiles, and/or percentage of bases covered to or beyond a threshold. Additionally, reads and bases can be filtered by mapping or base quality score.
+
+**Print Reads from BAM files**
+  can dynamically merge the contents of multiple input BAM files, resulting in merged output sorted in coordinate order.
+
+
+*REALIGNMENT*
+
+**Realigner Target Creator**
+  for use in local realignment, emits intervals for the Local Indel Realigner to target for cleaning. Ignores 454 reads, MQ0 reads, and reads with consecutive indel operators in the CIGAR string.
+
+**Indel Realigner**
+  performs local realignment of reads based on misalignments due to the presence of indels. Unlike most mappers, this walker uses the full alignment context to determine whether an appropriate alternate reference (i.e. indel) exists and updates SAMRecords accordingly.
+
+
+*BASE RECALIBRATION*
+
+**Count Covariates on BAM files**
+  is designed to work as the first pass in a two-pass processing step. It does a by-locus traversal operating only at sites that are not in dbSNP. We assume that all reference mismatches we see are therefore errors and indicative of poor base quality. This walker generates tables based on various user-specified covariates (such as read group, reported quality score, cycle, and dinucleotide) Since there is a large amount of data one can then calculate an empirical probability of error given the particular covariates seen at this site, where p(error) = num mismatches / num observations The output file is a CSV list of (the several covariate values, num observations, num mismatches, empirical quality score) The first non-comment line of the output file gives the name of the covariates that were used for this calculation. Note: ReadGroupCovariate and QualityScoreCovariate are required covariates and will be added for the user regardless of whether or not they were specified Note: This walker is designed to be used in conjunction with TableRecalibrationWalker.
+
+**Table Recalibration on BAM files**
+  is designed to work as the second pass in a two-pass processing step, doing a by-read traversal. For each base in each read this walker calculates various user-specified covariates (such as read group, reported quality score, cycle, and dinuc) Using these values as a key in a large hashmap the walker calculates an empirical base quality score and overwrites the quality score currently in the read. This walker then outputs a new bam file with these updated (recalibrated) reads. Note: This walker expects as input the recalibration table file generated previously by CovariateCounterWalker. Note: This walker is designed to be used in conjunction with CovariateCounterWalker.
+
+**Analyze Covariates**
+  creates collapsed versions of the recal csv file and call R scripts to plot residual error versus the various covariates.
+
+*GENOTYPING*
+
+**Unified Genotyper SNP and indel caller**
+  is a variant caller which unifies the approaches of several disparate callers. Works for single-sample and multi-sample data. The user can choose from several different incorporated calculation models.
+
+*ANNOTATION*
+
+**Variant Annotator**
+  annotates variant calls with context information. Users can specify which of the available annotations to use.
+
+*FILTRATION*
+
+**Variant Filtration on VCF files**
+  filters variant calls using a number of user-selectable, parameterizable criteria.
+
+**Select Variants from VCF files**
+  Often, a VCF containing many samples and/or variants will need to be subset in order to facilitate certain analyses (e.g. comparing and contrasting cases vs. controls; extracting variant or non-variant loci that meet certain requirements, displaying just a few samples in a browser like IGV, etc.). SelectVariants can be used for this purpose.
+
+*VARIANT QUALITY SCORE RECALIBRATION*
+
+**Variant Recalibrator**
+  takes variant calls as .vcf files, learns a Gaussian mixture model over the variant annotations and evaluates the variant -- assigning an informative lod score.
+  
+**Apply Variant Recalibration**
+  applies cuts to the input vcf file (by adding filter lines) to achieve the desired novel FDR levels which were specified during VariantRecalibration.
+
+*VARIANT UTILITIES*
+
+**Validate Variants**
+  validates a variants file.
+  
+**Eval Variants**
+  is a general-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more).
+  
+**Combine Variants**
+  combines VCF records from different sources; supports both full merges and set unions. Merge: combines multiple records into a single one; if sample names overlap then they are uniquified. Union: assumes each rod represents the same set of samples (although this is not enforced); using the priority list (if provided), emits a single record instance at every position represented in the rods.
+
+
+
+References
+----------
+
+| *A framework for variation discovery and genotyping using next-generation DNA sequencing data*.
+| M.A. DePristo, E. Banks, R. Poplin, K.V. Garimella, J.R. Maguire, C. Hartl, A.A. Philippakis, G. del Angel, M.A. Rivas, M. Hanna, A. McKenna, T.J. Fennell, A.M. Kernytsky, A.Y. Sivachenko, K. Cibulskis, S.B. Gabriel, D. Altshuler and M.J. Daly.
+| Nature Genetics (2011) 43, 491–498.
+| http://www.nature.com/ng/journal/v43/n5/full/ng.806.html
+
+|
+|
+|

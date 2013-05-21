@@ -1,0 +1,19 @@
+=============
+Filter Indels
+=============
+
+
+Allows extracting indels from SAM produced by BWA. Currently it can handle SAM with alignments that have only one insertion or one deletion, and will skip that alignment if it encounters one with more than one indel. It matches CIGAR strings (column 6 in the SAM file) like 5M3I5M or 4M2D10M, so there must be a match or mismatch of sufficient length on either side of the indel.
+
+
+Details
+-------
+
+
+
+References
+----------
+
+|
+|
+|

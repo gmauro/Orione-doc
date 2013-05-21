@@ -1,0 +1,14 @@
+========
+Get data
+========
+
+
+**Data can be added to Galaxy@CRS4** by the following tools:
+
+- **Upload File** from your computer
+- **UCSC Main** table browser
+- **UCSC Archaea** table browser
+- **EBI SRA** ENA SRA
+- **Get SraFastQ Files**
+- **Convert SRA Files**
+- **Gent Nucl/Prot from Taxa**

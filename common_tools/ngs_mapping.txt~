@@ -1,0 +1,13 @@
+============
+NGS: mapping
+============
+
+
+**Mapping** tools:
+
+- **Lastz** map short reads against reference sequence
+- **Map with Bowtie** for Illumina
+- **Bowtie2** is a short-read aligner
+- **Map with BWA** for Illumina
+- **Map with BFAST**
+- **Map with Mosaik**

@@ -1,0 +1,24 @@
+======
+SSPACE
+======
+
+Overview
+--------
+
+SSPACE is a stand-alone program for scaffolding pre-assembled contigs using paired-read data. It is unique in offering the possibility to manually control the scaffolding process. By using the distance information of paired-end and/or matepair data, SSPACE is able to assess the order, distance and orientation of your contigs and combine them into scaffolds. The input data is given by pre-assembled contig sequences (FASTA) and NGS paired-read data (FASTA or FASTQ). The final scaffolds are provided in FASTA format.
+
+
+Details
+-------
+
+
+References
+----------
+
+| *Scaffolding pre-assembled contigs using SSPACE*.
+| M. Boetzer, C.V. Henkel, H.J. Jansen, D. Butler and W. Pirovano.
+| Bioinformatics (2011) 27 (4): 578-579.
+
+|
+|
+|

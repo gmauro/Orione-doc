@@ -1,0 +1,15 @@
+====================
+Tools
+====================
+
+
+The following utilities are available for Post Assembly processes:
+
+**Check bacterial contigs**
+  computes some statistics (including N50 and NG50) over a Contigs Collection.
+
+**Check bacterial draft**
+  computes some statistics (including N50 and NG50) over a draft consensus bacterial genome.
+
+**Extract contigs from draft**
+  extracts Contigs from a Draft Bacterial Genome if longer than indicated as threshold.

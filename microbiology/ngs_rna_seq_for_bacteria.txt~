@@ -1,0 +1,8 @@
+=========================
+NGS: RNA-seq for bacteria
+=========================
+
+.. toctree::
+   
+   EDGE <ngs_rna_seq_for_bacteria/edge>
+   

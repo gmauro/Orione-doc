@@ -1,0 +1,18 @@
+====================
+Indel analysis table
+====================
+
+Creates a table allowing for analysis and comparison of indel data. Combines any number of interval files that have been produced by the tool that converts indel SAM data to interval format. Includes overall total counts for all or some files. The tool has the option to not include a given file's counts in the total column. This could be useful for combined data if the counts for certain indels might be included more than once.
+
+
+Details
+-------
+
+
+
+References
+----------
+
+|
+|
+|

@@ -1,0 +1,11 @@
+===============
+Variant Calling
+===============
+
+.. toctree::
+   
+   NGS: SNP effects <variant_calling/ngs_snp_effects>
+   NGS: indel analysis <variant_calling/ngs_indel_analysis>
+   NGS: SAM tools <variant_calling/ngs_sam_tools>
+   NGS: GATK tools <variant_calling/ngs_gatk_tools>
+   VCF tools <variant_calling/vcf_tools>

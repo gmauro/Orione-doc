@@ -1,0 +1,18 @@
+==================
+FASTA manipulation
+==================
+
+FASTA files can be manipulated with the following tools:
+
+- Compute sequence length
+- Filter sequences by length
+- Concatenate FASTA alignment by species
+- FASTA-to-Tabular converter
+- Tabular-to-FASTA converts tabular file to FASTA format
+- FASTA Width formatter
+- RNA/DNA converter
+- Collapse sequences
+- Extract Genomic DNA using coordinates from assembled/unassembled genomes
+- CD-Hit 
+
+
