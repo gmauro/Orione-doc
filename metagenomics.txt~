@@ -1,9 +1,0 @@
-============
-Metagenomics
-============
-
-.. toctree::
-   
-   Metaphlan <metagenomics/metaphlan>
-   Other tools <metagenomics/other_tools>
-   

@@ -1,6 +1,0 @@
-===============
-NGS: Simulation
-===============
-
-
-This tool simulates an Illumina run and provides plots of false positives and false negatives. It allows for a range of simulation parameters to be set. Note that this simulation sets only one (randomly chosen) position in the genome as polymorphic, according to the value specified. Superimposed on this are "sequencing errors", which are uniformly (and randomly) distributed. Polymorphisms are assigned using the detection threshold, so if the detection threshold is set to the same as the minor allele frequency, the expected false negative rate is 50%.

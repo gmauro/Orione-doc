@@ -1,9 +1,0 @@
-========
-Chip-seq
-========
-
-.. toctree::
-   
-   NGS: peak calling <chip_seq/ngs_peak_calling>
-   Motif tools <chip_seq/motif_tools>
-
