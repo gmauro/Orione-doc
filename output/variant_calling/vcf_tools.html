@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>VCF tools &mdash; Galaxy@CRS4 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../index.html" />
+    <link rel="up" title="Variant Calling" href="../variant_calling.html" />
+    <link rel="next" title="Metagenomics" href="../metagenomics.html" />
+    <link rel="prev" title="NGS: GATK tools" href="ngs_gatk_tools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../metagenomics.html" title="Metagenomics"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ngs_gatk_tools.html" title="NGS: GATK tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+          <li><a href="../variant_calling.html" accesskey="U">Variant Calling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="vcf-tools">
+<h1>VCF tools<a class="headerlink" href="#vcf-tools" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt><strong>Intersect Generate the intersection of two VCF files</strong></dt>
+<dd>uses vcfPytools&#8217; intersect command to generate the intersection of two VCF files. Two input files are required as input and the intersection of these two files is generated and sent to the output. These files must be sorted by genomic coordinate to function correctly, although the reference sequence order is no important. The intersection can be calculated on two VCF files or a VCF and a BED file.</dd>
+</dl>
+<p>If the priority file argument is set (this must be equal to one of the input VCF files), then the record written to the output will come from this file. If this argument is not set, the record with the highest quality is written out.</p>
+<dl class="docutils">
+<dt><strong>Annotate a VCF file (dbSNP, hapmap)</strong></dt>
+<dd>uses vcfPytools&#8217; annotate command annotate a VCF file. Currently, either a hapmap or a dbsnp file should be provided, not both. dbSNP option will annotate the VCF file with dbSNP rsid values. The input dbSNP file must also be in VCF v4.0 format. Only dbSNP entries with VC=SNP are included. hapmap option will annotate the VCF file info string to include HM3 if the record is included hapmap. If the ref/alt values do not match the hapmap file, the info string will be populated with HM3A.</dd>
+<dt><strong>Filter a VCF file</strong></dt>
+<dd>uses vcfPytools&#8217; filter command. Quality option will check the variant quality for each record and if it is below the defined value, the filter field will be populated with the filter entry Q[value]. Any value in the info string can be used for filtering by using the &#8216;Filter by info&#8217; option. This option takes three values: the info string tag, the cutoff value and whether to filter out those records with less than (lt) or greater than (gt) this value.</dd>
+<dt><strong>Extract reads from a specified region</strong></dt>
+<dd>uses vcfPytools&#8217; extract command to extract reads from a specified region of a VCF file.</dd>
+<dt><strong>VCF to MAF Custom Track for display at UCSC</strong></dt>
+<dd>converts a Variant Call Format (VCF) file into a Multiple Alignment Format (MAF) custom track file suitable for display at genome browsers.</dd>
+<dt><strong>Extract consensus Sequence from VCF</strong></dt>
+<dd>extracts Consensus sequence from VCF file.</dd>
+</dl>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VCF tools</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ngs_gatk_tools.html"
+                        title="previous chapter">NGS: GATK tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../metagenomics.html"
+                        title="next chapter">Metagenomics</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/variant_calling/vcf_tools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../metagenomics.html" title="Metagenomics"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ngs_gatk_tools.html" title="NGS: GATK tools"
+             >previous</a> |</li>
+        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+          <li><a href="../variant_calling.html" >Variant Calling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, CRS4 Bioinformatica.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

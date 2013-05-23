@@ -1,0 +1,138 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Filter Indels &mdash; Galaxy@CRS4 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../../index.html" />
+    <link rel="up" title="NGS: Indel analysis" href="../ngs_indel_analysis.html" />
+    <link rel="next" title="Extract Indels" href="extract_indels.html" />
+    <link rel="prev" title="NGS: Indel analysis" href="../ngs_indel_analysis.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="extract_indels.html" title="Extract Indels"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ngs_indel_analysis.html" title="NGS: Indel analysis"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+          <li><a href="../../variant_calling.html" >Variant Calling</a> &raquo;</li>
+          <li><a href="../ngs_indel_analysis.html" accesskey="U">NGS: Indel analysis</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="filter-indels">
+<h1>Filter Indels<a class="headerlink" href="#filter-indels" title="Permalink to this headline">¶</a></h1>
+<p>Allows extracting indels from SAM produced by BWA. Currently it can handle SAM with alignments that have only one insertion or one deletion, and will skip that alignment if it encounters one with more than one indel. It matches CIGAR strings (column 6 in the SAM file) like 5M3I5M or 4M2D10M, so there must be a match or mismatch of sufficient length on either side of the indel.</p>
+<div class="section" id="details">
+<h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Filter Indels</a><ul>
+<li><a class="reference internal" href="#details">Details</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../ngs_indel_analysis.html"
+                        title="previous chapter">NGS: Indel analysis</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="extract_indels.html"
+                        title="next chapter">Extract Indels</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/variant_calling/ngs_indel_analysis/filter_indels.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="extract_indels.html" title="Extract Indels"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ngs_indel_analysis.html" title="NGS: Indel analysis"
+             >previous</a> |</li>
+        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+          <li><a href="../../variant_calling.html" >Variant Calling</a> &raquo;</li>
+          <li><a href="../ngs_indel_analysis.html" >NGS: Indel analysis</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, CRS4 Bioinformatica.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

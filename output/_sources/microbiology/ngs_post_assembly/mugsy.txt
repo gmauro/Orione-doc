@@ -1,0 +1,27 @@
+=====
+Mugsy
+=====
+
+Mugsy is a **multiple whole genome alignment** tool.
+
+
+Details
+-------
+
+Mugsy generates a MAF (multiple alignment format) file containing the multiple alignments from FASTA inputs. 
+
+This implementation runs with two files only: reference vs contigs/draft(s). For multiple alignment a single Multi-FASTA file containing all contigs should be provided.
+
+
+References
+----------
+
+| *Mugsy: Fast multiple alignment of closely related whole genomes.*
+| S.V. Angiuoli and S.L. Salzberg.
+| Bioinformatics (2011), 27 (3): 334-342.
+| http://bioinformatics.oxfordjournals.org/content/27/3/334
+
+|
+|
+|
+

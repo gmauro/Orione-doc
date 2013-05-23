@@ -1,0 +1,10 @@
+==================
+FASTQ manipulation
+==================
+
+FASTQ files can be manipulated with the following tool:
+
+- Extract multiconsensus sequences from multiFastQ
+
+
+

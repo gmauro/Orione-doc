@@ -1,0 +1,35 @@
+======
+Velvet
+======
+
+
+Velvet is a de novo genomic assembler specially designed for short read sequencing technologies, such as Solexa or 454.
+
+Velvet currently takes in short read sequences, removes errors then produces high quality unique contigs. It then uses paired-end read and long read information, when available, to retrieve the repeated areas between contigs.
+
+
+Details
+-------
+
+Velvet consists of two parts:
+
+**Velveth**
+  takes in a number of sequence files, produces a hashtable, then outputs two files in an output directory (creating it if necessary), Sequences and Roadmaps, which are necessary to velvetg.
+
+**Velvetg**
+  can input sequence files in the following formats: ``fasta``, ``fastq``, ``fasta.gz``, ``fastq.gz``, ``eland``, ``gerald``.
+
+The input files are prepared for the velvet assembler using **velveth**.
+
+
+References
+----------
+
+| *Velvet: algorithms for de novo short read assembly using de Bruijn graphs.*
+| D.R. Zerbino and E. Birney.
+| Genome Research 18:821-829.
+| http://genome.cshlp.org/content/18/5/821
+
+|
+|
+|

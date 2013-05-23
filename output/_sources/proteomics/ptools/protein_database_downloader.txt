@@ -1,0 +1,19 @@
+===========================
+Protein database downloader
+===========================
+
+
+
+The output is a FASTA file containing the specified protein sequences.
+
+Details
+-------
+  
+
+
+References
+----------
+
+|
+|
+|
