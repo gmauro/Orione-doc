@@ -2,8 +2,12 @@
 NGS: mapping
 ============
 
+.. toctree::
+   :titlesonly:
+   
+   BLAT <ngs_mapping/blat>
 
-**Mapping** tools:
+Other **mapping** tools:
 
 - *Lastz* map short reads against reference sequence
 - *Map with Bowtie* for Illumina

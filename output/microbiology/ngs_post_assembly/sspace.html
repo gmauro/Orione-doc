@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>SSPACE &mdash; Galaxy@CRS4 0.1 documentation</title>
+    <title>SSPACE &mdash; Orione 0.1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -25,9 +25,9 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../../index.html" />
+    <link rel="top" title="Orione 0.1 documentation" href="../../index.html" />
     <link rel="up" title="NGS: post_assembly" href="../ngs_post_assembly.html" />
-    <link rel="next" title="SOPRA" href="sopra.html" />
+    <link rel="next" title="SSAKE" href="ssake.html" />
     <link rel="prev" title="Tools" href="tools.html" /> 
   </head>
   <body>
@@ -38,12 +38,12 @@
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="sopra.html" title="SOPRA"
+          <a href="ssake.html" title="SSAKE"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="tools.html" title="Tools"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../../microbiology.html" >Microbiology</a> &raquo;</li>
           <li><a href="../ngs_post_assembly.html" accesskey="U">NGS: post_assembly</a> &raquo;</li> 
       </ul>
@@ -56,10 +56,15 @@
             
   <div class="section" id="sspace">
 <h1>SSPACE<a class="headerlink" href="#sspace" title="Permalink to this headline">¶</a></h1>
-<p>SSPACE, <strong>SSAKE-based Scaffolding of Pre-Assembled Contigs after Extension</strong>, is a stand-alone program for scaffolding pre-assembled contigs using paired-read data. It is unique in offering the possibility to manually control the scaffolding process.</p>
+<p>SSPACE, <strong>SSAKE-based Scaffolding of Pre-Assembled Contigs after Extension</strong>, is a script able to extend and scaffold pre-assembled contigs using one or more mate pairs or paired-end libraries, or even a combination.</p>
+<p>Some parameters are still missing:</p>
+<ul class="simple">
+<li>trimming options (-t)</li>
+<li>unpaired single (-u)</li>
+<li>minimal base ratio (-r)</li>
+</ul>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<p>By using the distance information of paired-end and/or matepair data, SSPACE is able to assess the order, distance and orientation of your contigs and combine them into scaffolds. The input data is given by pre-assembled contig sequences (FASTA) and NGS paired-read data (FASTA or FASTQ). The final scaffolds are provided in FASTA format.</p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
@@ -96,8 +101,8 @@
   <p class="topless"><a href="tools.html"
                         title="previous chapter">Tools</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="sopra.html"
-                        title="next chapter">SOPRA</a></p>
+  <p class="topless"><a href="ssake.html"
+                        title="next chapter">SSAKE</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/microbiology/ngs_post_assembly/sspace.txt"
@@ -127,12 +132,12 @@
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="sopra.html" title="SOPRA"
+          <a href="ssake.html" title="SSAKE"
              >next</a> |</li>
         <li class="right" >
           <a href="tools.html" title="Tools"
              >previous</a> |</li>
-        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../../microbiology.html" >Microbiology</a> &raquo;</li>
           <li><a href="../ngs_post_assembly.html" >NGS: post_assembly</a> &raquo;</li> 
       </ul>

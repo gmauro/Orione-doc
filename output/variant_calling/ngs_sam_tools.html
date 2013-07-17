@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>NGS: SAM tools &mdash; Galaxy@CRS4 0.1 documentation</title>
+    <title>NGS: SAM tools &mdash; Orione 0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../index.html" />
+    <link rel="top" title="Orione 0.1 documentation" href="../index.html" />
     <link rel="up" title="Variant Calling" href="../variant_calling.html" />
     <link rel="next" title="NGS: GATK tools" href="ngs_gatk_tools.html" />
     <link rel="prev" title="Indel analysis" href="ngs_indel_analysis/indel_analysis.html" /> 
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="ngs_indel_analysis/indel_analysis.html" title="Indel analysis"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../variant_calling.html" accesskey="U">Variant Calling</a> &raquo;</li> 
       </ul>
     </div>  
@@ -81,12 +81,6 @@
 <dd>removes potential PCR duplicates: if multiple read pairs have identical external coordinates, only retain the pair with highest mapping quality. In the paired-end mode, this command ONLY works with FR orientation and requires ISIZE is correctly set. It does not work for unpaired reads (e.g. two ends mapped to different chromosomes or orphan reads).</dd>
 <dt><strong>Slice BAM</strong></dt>
 <dd>accepts an input BAM file and an input BED file and creates an output BAM file containing only those alignments that overlap the provided BED intervals.</dd>
-<dt><strong>From SAM to Consensus/Variant</strong></dt>
-<dd>performs an entire pipeline from mapping (in SAM) to the extraction of a draft consensus sequence It also calculate SNPs and shor indels by Samtools and extracts contigs for downstream analysis.</dd>
-<dt><strong>Get Mapping Sequences from SAM</strong></dt>
-<dd>retrieves all reads that did match the reference. It writes them in a fastQ format. It also returns a SAM file without un-mapped reads.</dd>
-<dt><strong>Get UnMapped Sequences from SAM</strong></dt>
-<dd>retrieves all reads that did not match the reference. It writes them in a FASTQ format.</dd>
 </dl>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
@@ -158,7 +152,7 @@
         <li class="right" >
           <a href="ngs_indel_analysis/indel_analysis.html" title="Indel analysis"
              >previous</a> |</li>
-        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../variant_calling.html" >Variant Calling</a> &raquo;</li> 
       </ul>
     </div>

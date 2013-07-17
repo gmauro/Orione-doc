@@ -10,4 +10,4 @@ Tools for **NGS quality control** are:
 - *Compute quality statistics*
 - *Draw quality score boxplot*
 - *Draw nucleotides distribution chart*
-- *Build vase quality distribution*
+- *Build base quality distribution*

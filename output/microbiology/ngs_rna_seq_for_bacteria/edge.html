@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>EDGE &mdash; Galaxy@CRS4 0.1 documentation</title>
+    <title>EDGE-pro &mdash; Orione 0.1 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../../index.html" />
+    <link rel="top" title="Orione 0.1 documentation" href="../../index.html" />
     <link rel="up" title="NGS: RNA-seq for bacteria" href="../ngs_rna_seq_for_bacteria.html" />
     <link rel="next" title="NGS: de novo assembly" href="../ngs_de_novo_assembly.html" />
     <link rel="prev" title="NGS: RNA-seq for bacteria" href="../ngs_rna_seq_for_bacteria.html" /> 
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../ngs_rna_seq_for_bacteria.html" title="NGS: RNA-seq for bacteria"
              accesskey="P">previous</a> |</li>
-        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../../microbiology.html" >Microbiology</a> &raquo;</li>
           <li><a href="../ngs_rna_seq_for_bacteria.html" accesskey="U">NGS: RNA-seq for bacteria</a> &raquo;</li> 
       </ul>
@@ -54,17 +54,17 @@
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="edge">
-<h1>EDGE<a class="headerlink" href="#edge" title="Permalink to this headline">¶</a></h1>
-<p>EDGE, <strong>Estimated Degree of Gene Expression</strong> is an efficient software system to <strong>estimate gene expression levels in bacterial genomes</strong> from RNA-seq data. EDGE uses <strong>Bowtie2</strong> for alignment and then estimates expression directly from the alignment results.</p>
-<p>EDGE includes routines to assign reads aligning to overlapping gene regions accurately. 15% or more of bacterial genes overlap other genes, making this a significant problem for bacterial RNA-seq, one that is generally ignored by programs designed for eukaryotic RNA-seq experiments.</p>
+  <div class="section" id="edge-pro">
+<h1>EDGE-pro<a class="headerlink" href="#edge-pro" title="Permalink to this headline">¶</a></h1>
+<p>EDGE-pro, <strong>Estimated Degree of Gene Expression in PROkaryots</strong> is an efficient software system to <strong>estimate gene expression levels prokaryotic genomes</strong> from RNA-seq data. EDGE-pro uses Bowtie2 for alignment and then estimates expression directly from the alignment results.</p>
+<p>EDGE-pro includes routines to assign reads aligning to overlapping gene regions accurately. 15% or more of bacterial genes overlap other genes, making this a significant problem for bacterial RNA-seq, one that is generally ignored by programs designed for eukaryotic RNA-seq experiments.</p>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
-<p>Input files with gene coordinates in <tt class="docutils literal"><span class="pre">ptt</span></tt> and <tt class="docutils literal"><span class="pre">rnt</span></tt> format can be retrieved with the <strong>Get EDGE files</strong> tool available in Galaxy, or downloaded from the Genome/Bacteria section of the <strong>NCBI FTP repository</strong>. EDGE accepts files in Sanger FASTQ format (Galaxy type <tt class="docutils literal"><span class="pre">fastqsanger</span></tt>). Use the <strong>FASTQ Groomer</strong> to prepare your files.</p>
+<p>Input files with gene coordinates in PTT and RNT format can be retrieved with the Get EDGE-pro Files tool available in Galaxy, or downloaded from the NCBI ftp repository. EDGE-pro accepts files in Sanger FASTQ format (Galaxy type fastqsanger). Use the FASTQ Groomer to prepare your files.</p>
+<p>All 3 types of files (FASTA reference genome, PTT and RNT) must have the same order of chromosomes/plasmids (e.g. if chr1 is before chr2 in genome.fasta file, then chr1 must be before chr2 in ptt and rnt files as well). If there is no PTT or RNT file for one of chromosomes/plasmids, place this chromosome/plasmid at the end of the file.</p>
 </div>
 <div class="section" id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
-<p><strong>Questo è un link al paper che descrive EDGE-pro... è lo stesso programma installato su Galaxy, o si tratta di un&#8217;altra versione di EDGE?</strong></p>
 <div class="line-block">
 <div class="line"><em>EDGE-pro: Estimated Degree of Gene Expression in Prokaryotic Genomes</em>.</div>
 <div class="line">T. Magoc, D. Wood, and S.L. Salzberg.</div>
@@ -87,7 +87,7 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">EDGE</a><ul>
+<li><a class="reference internal" href="#">EDGE-pro</a><ul>
 <li><a class="reference internal" href="#details">Details</a></li>
 <li><a class="reference internal" href="#references">References</a></li>
 </ul>
@@ -134,7 +134,7 @@
         <li class="right" >
           <a href="../ngs_rna_seq_for_bacteria.html" title="NGS: RNA-seq for bacteria"
              >previous</a> |</li>
-        <li><a href="../../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../../microbiology.html" >Microbiology</a> &raquo;</li>
           <li><a href="../ngs_rna_seq_for_bacteria.html" >NGS: RNA-seq for bacteria</a> &raquo;</li> 
       </ul>

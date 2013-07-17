@@ -26,4 +26,5 @@ Other available **metagenomics** tools are:
 **Poisson two-sample test**
   checks if the number of reads that fall in a particular taxon in location 1 is different from those that fall in the same taxon in location 2.
 
-
+**Create Krona chart**
+  converts the standard result file of MetaPhlAn or Summarize taxonomy tools in a zoomable pie chart using Krona.

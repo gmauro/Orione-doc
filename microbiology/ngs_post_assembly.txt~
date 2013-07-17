@@ -1,0 +1,12 @@
+==================
+NGS: post_assembly
+==================
+
+.. toctree::
+   :titlesonly:
+   
+   Tools <ngs_post_assembly/tools>
+   SSPACE <ngs_post_assembly/sspace>
+   SOPRA <ngs_post_assembly/sopra>
+   MuMMer <ngs_post_assembly/mummer>
+   Mugsy <ngs_post_assembly/mugsy>

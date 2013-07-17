@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Metaphlan &mdash; Galaxy@CRS4 0.1 documentation</title>
+    <title>Metaphlan &mdash; Orione 0.1 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Galaxy@CRS4 0.1 documentation" href="../index.html" />
+    <link rel="top" title="Orione 0.1 documentation" href="../index.html" />
     <link rel="up" title="Metagenomics" href="../metagenomics.html" />
     <link rel="next" title="Other tools" href="other_tools.html" />
     <link rel="prev" title="Metagenomics" href="../metagenomics.html" /> 
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="../metagenomics.html" title="Metagenomics"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../metagenomics.html" accesskey="U">Metagenomics</a> &raquo;</li> 
       </ul>
     </div>  
@@ -57,8 +57,15 @@
 <h1>Metaphlan<a class="headerlink" href="#metaphlan" title="Permalink to this headline">¶</a></h1>
 <p>MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data. MetaPhlAn relies on unique clade-specific marker genes identified from reference genomes, allowing orders of magnitude speedups and unambiguous taxonomic assignments.</p>
 <p>Although MetaPhlAn can use both BlastN and BowTie2 in the read-to-marker mapping step, this Galaxy module uses only BowTie2 for computational reasons.</p>
-<p>For additional information about MetaPhlAn and the MetaPhlAn command line package, please refer to <a class="reference external" href="http://huttenhower.sph.harvard.edu/metaphlan">http://huttenhower.sph.harvard.edu/metaphlan</a> or to the paper reported below. Please notice that most of the additional parameters that can be tuned with the command line version are set here to the default values.</p>
-<p>Tools <strong>MetaPhlAn to PhyloXML</strong> converter and <strong>Get Proteomes from MetaphlanOut</strong> are available.</p>
+<p>Other available tools are:</p>
+<dl class="docutils">
+<dt><strong>MetaPhlAn to PhyloXML</strong></dt>
+<dd>converts the results of metagonome profiling performed with MetaPhlAn from tabular to PhyloXML format. The tool accepts as input only the result of rel_ab analysis (profiling in terms of relative abundaces), not reads_map or clade_profiles analysis.</dd>
+<dt><strong>MetaPhlAn to Krona</strong></dt>
+<dd>converts the standard result file of MetaPhlAn in a zoomable pie chart using Krona.</dd>
+<dt><strong>Get Proteomes from MetaphlanOut</strong></dt>
+<dd>retrieves proteomes from NCBI of the genus and species indicated by a Metaphlan output file.</dd>
+</dl>
 <div class="section" id="details">
 <h2>Details<a class="headerlink" href="#details" title="Permalink to this headline">¶</a></h2>
 <p>The input file must be a multi-fasta file containing metagenomic reads loaded with the &#8220;Get Data&#8221; module in the left panel. Reads can be as short as ~40 nt although lengths higher than 70 nt are recommended.</p>
@@ -137,7 +144,7 @@
         <li class="right" >
           <a href="../metagenomics.html" title="Metagenomics"
              >previous</a> |</li>
-        <li><a href="../index.html">Galaxy@CRS4 0.1 documentation</a> &raquo;</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
           <li><a href="../metagenomics.html" >Metagenomics</a> &raquo;</li> 
       </ul>
     </div>

@@ -1,0 +1,36 @@
+======
+SSPACE
+======
+
+
+SSPACE, **SSAKE-based Scaffolding of Pre-Assembled Contigs after Extension**, is a script able to extend and scaffold pre-assembled contigs using one or more mate pairs or paired-end libraries, or even a combination.
+
+Some parameters are still missing:
+
+-t
+  trimming options
+
+-u
+  unpaired single
+
+-r
+  minimal base ratio
+
+
+Details
+-------
+
+
+
+
+References
+----------
+
+| *Scaffolding pre-assembled contigs using SSPACE*.
+| M. Boetzer, C.V. Henkel, H.J. Jansen, D. Butler and W. Pirovano.
+| Bioinformatics (2011) 27 (4): 578-579.
+| http://bioinformatics.oxfordjournals.org/content/27/4/578.full
+
+|
+|
+|

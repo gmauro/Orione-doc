@@ -41,14 +41,6 @@ Tools to manipulate SAM files:
 **Slice BAM**
   accepts an input BAM file and an input BED file and creates an output BAM file containing only those alignments that overlap the provided BED intervals.
 
-**From SAM to Consensus/Variant**
-  performs an entire pipeline from mapping (in SAM) to the extraction of a draft consensus sequence It also calculate SNPs and shor indels by Samtools and extracts contigs for downstream analysis.
-
-**Get Mapping Sequences from SAM**
-  retrieves all reads that did match the reference. It writes them in a fastQ format. It also returns a SAM file without un-mapped reads.
-
-**Get UnMapped Sequences from SAM**
-  retrieves all reads that did not match the reference. It writes them in a FASTQ format.
 
 
 

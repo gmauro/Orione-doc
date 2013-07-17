@@ -40,7 +40,7 @@ source_suffix = '.txt'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Galaxy@CRS4'
+project = u'Orione'
 copyright = u'2013, CRS4 Bioinformatica'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'GalaxyCRS4doc'
+htmlhelp_basename = 'Orione_doc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'GalaxyCRS4.tex', u'Galaxy@CRS4 Documentation',
+  ('index', 'Orione.tex', u'Orione Documentation',
    u'CRS4 Bioinformatica', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'galaxycrs4', u'Galaxy@CRS4 Documentation',
+    ('index', 'orione', u'Orione Documentation',
      [u'CRS4 Bioinformatica'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'GalaxyCRS4', u'Galaxy@CRS4 Documentation',
-   u'CRS4 Bioinformatica', 'GalaxyCRS4', 'One line description of project.',
+  ('index', 'Orione', u'Orione Documentation',
+   u'CRS4 Bioinformatica', 'Orione', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 
 
 
-pdf_documents = [('index', u'Galaxy@CRS4 Documentation', u'Galaxy@CRS4 Documentation', u'CRS4 Bioinformatica'),]
+pdf_documents = [('index', u'Orione Documentation', u'Orione Documentation', u'CRS4 Bioinformatica'),]
 
   
 # index - master document

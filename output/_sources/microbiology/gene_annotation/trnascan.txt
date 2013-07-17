@@ -8,6 +8,7 @@ tRNAscan-SE was designed to make rapid, sensitive **searches of genomic sequence
 Details
 -------
 
+This tool requires FASTA format.
 
 References
 ----------

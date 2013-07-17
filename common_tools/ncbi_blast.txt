@@ -31,5 +31,11 @@ NCBI BLAST+
 *NCBI DustMasker*
   Mask low complexity regions.
 
+*NCBI BLAST+ rpsblast*
+  Search protein domain database (PSSMs) with protein query sequence(s).
+
+*NCBI BLAST+ rpsblastn*
+  Search protein domain database (PSSMs) with translated nucleotide query sequence(s).
+
 *NCBI BLAST+ makeblastdb*
   Make BLAST database.

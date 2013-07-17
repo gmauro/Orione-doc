@@ -5,5 +5,5 @@ NGS: RNA-seq for bacteria
 .. toctree::
    :titlesonly:
    
-   EDGE <ngs_rna_seq_for_bacteria/edge>
+   EDGE-pro <ngs_rna_seq_for_bacteria/edge>
    

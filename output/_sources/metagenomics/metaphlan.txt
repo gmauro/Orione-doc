@@ -7,9 +7,17 @@ MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool for profil
 
 Although MetaPhlAn can use both BlastN and BowTie2 in the read-to-marker mapping step, this Galaxy module uses only BowTie2 for computational reasons.
 
-For additional information about MetaPhlAn and the MetaPhlAn command line package, please refer to http://huttenhower.sph.harvard.edu/metaphlan or to the paper reported below. Please notice that most of the additional parameters that can be tuned with the command line version are set here to the default values.
 
-Tools **MetaPhlAn to PhyloXML** converter and **Get Proteomes from MetaphlanOut** are available.
+Other available tools are:
+
+**MetaPhlAn to PhyloXML**
+  converts the results of metagonome profiling performed with MetaPhlAn from tabular to PhyloXML format. The tool accepts as input only the result of rel_ab analysis (profiling in terms of relative abundaces), not reads_map or clade_profiles analysis.
+
+**MetaPhlAn to Krona**
+  converts the standard result file of MetaPhlAn in a zoomable pie chart using Krona.
+
+**Get Proteomes from MetaphlanOut**
+  retrieves proteomes from NCBI of the genus and species indicated by a Metaphlan output file.
 
 
 Details

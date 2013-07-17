@@ -9,8 +9,7 @@ Cuffmerge is part of Cufflinks.
 Details
 -------
 
-Cuffmerge takes Cufflinks' GTF output as input, and optionally can take a "reference" annotation (such as from Ensembl)
-
+Cuffmerge takes Cufflinks' GTF output as input, and optionally can take a "reference" annotation (such as from Ensembl).
 
 
 
