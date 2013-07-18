@@ -3,7 +3,7 @@ NGS: manipulation
 =================
 
 
-Tools to **manipulate NGS data in Galaxy@CRS4**:
+Tools to **manipulate NGS data in Orione**:
 
 - *FASTQ positional and quality trimming*
 - *Paired-end compositional filtering*
