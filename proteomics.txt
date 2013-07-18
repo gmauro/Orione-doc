@@ -1,9 +1,0 @@
-==========
-Proteomics
-==========
-
-.. toctree::
-   :titlesonly:
-   
-   PTools <proteomics/ptools>
-

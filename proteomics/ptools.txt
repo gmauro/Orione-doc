@@ -1,9 +1,0 @@
-======
-PTools
-======
-
-.. toctree::
-   :titlesonly:
-   
-   Protein Database Downloader <ptools/protein_database_downloader>
-
