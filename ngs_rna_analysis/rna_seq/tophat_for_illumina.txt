@@ -1,5 +1,5 @@
 ===================
-Tophat for Illumina
+TopHat for Illumina
 ===================
 
 
