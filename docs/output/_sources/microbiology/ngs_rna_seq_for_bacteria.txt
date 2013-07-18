@@ -1,0 +1,9 @@
+=========================
+NGS: RNA-seq for bacteria
+=========================
+
+.. toctree::
+   :titlesonly:
+   
+   EDGE-pro <ngs_rna_seq_for_bacteria/edge>
+   

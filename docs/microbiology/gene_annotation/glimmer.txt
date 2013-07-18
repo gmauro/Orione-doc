@@ -1,0 +1,41 @@
+========
+Glimmer3
+========
+
+
+Glimmer is a system for **finding genes in microbial DNA**, especially the genomes of bacteria, archaea, and viruses. Glimmer, **Gene Locator and Interpolated Markov ModelER**, uses interpolated Markov models (IMMs) to identify the coding regions and distinguish them from noncoding DNA. The IMM approach uses a combination of Markov models from 1st through 8th-order, weighting each model according to its predictive power. Glimmer uses 3-periodic nonhomogenous Markov models in its IMMs. 
+
+
+Details
+-------
+
+Glimmer3 is presented as a suite of programs that can be used independently:
+
+**Long-ORFs**
+  identifies long, non-overlapping open reading frames (ORFs) in a DNA sequence file.
+
+**Extract**
+  reads FASTA-format *sequence-file* and extract from it the subsequences specified by *coords*.
+
+**Build-ICM**
+  produces a probability model of coding sequences, called an interpolated context model or ICM.
+
+**Glimmer**
+  reads DNA sequences in *sequence-file* and predict genes in them using the Interpolated Context Model. Outputs are a detail file and a prediction file.
+
+**Anomaly**
+  reads DNA sequence in *sequence-file* and for each region specified by the coordinates in *coords*, check whether the region represents a normal gene, i.e., it begins with a start codon, ends with a stop codon, and has no frame shifts.
+  
+
+
+References
+----------
+
+| *Identifying bacterial genes and endosymbiont DNA with Glimmer.*
+| A.L. Delcher, K.A. Bratke, E.C. Powers and S.L. Salzberg.
+| Bioinformatics 23 (6): 673-679.
+| http://bioinformatics.oxfordjournals.org/content/23/6/673.full
+
+|
+|
+|

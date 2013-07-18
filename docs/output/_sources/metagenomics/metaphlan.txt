@@ -1,0 +1,43 @@
+=========
+Metaphlan
+=========
+
+
+MetaPhlAn (Metagenomic Phylogenetic Analysis) is a computational tool for profiling the composition of microbial communities from metagenomic shotgun sequencing data. MetaPhlAn relies on unique clade-specific marker genes identified from reference genomes, allowing orders of magnitude speedups and unambiguous taxonomic assignments.
+
+Although MetaPhlAn can use both BlastN and BowTie2 in the read-to-marker mapping step, this Galaxy module uses only BowTie2 for computational reasons.
+
+
+Other available tools are:
+
+**MetaPhlAn to PhyloXML**
+  converts the results of metagonome profiling performed with MetaPhlAn from tabular to PhyloXML format. The tool accepts as input only the result of rel_ab analysis (profiling in terms of relative abundaces), not reads_map or clade_profiles analysis.
+
+**Get Proteomes from MetaphlanOut**
+  retrieves proteomes from NCBI of the genus and species indicated by a Metaphlan output file.
+
+
+Details
+-------
+
+
+The input file must be a multi-fasta file containing metagenomic reads loaded with the "Get Data" module in the left panel. Reads can be as short as ~40 nt although lengths higher than 70 nt are recommended.
+
+A synthetic metagenome you can use as sample input is available at http://huttenhower.sph.harvard.edu/sites/default/files/LC1.fna
+
+The output is a two column tab-separated plain file reporting the predicted microbial clades present in the metagenomic samples and the corresponding relative abundances.
+
+All taxonomic levels from domain to species will be reported and higher taxonomic levelis contain the sum of the abundances of its taxonomic leaf nodes (usually species) and, possibly, some lower level "unclassified" clades.
+
+
+References
+----------
+
+| *Metagenomic microbial community profiling using unique clade-specific marker genes*.
+| N. Segata, L. Waldron, A. Ballarini, V. Narasimhan, O. Jousson, C. Huttenhower.
+| Nature Methods 9(8), 811-814 (2012)
+| http://www.nature.com/nmeth/journal/v9/n8/full/nmeth.2066.html
+
+|
+|
+|

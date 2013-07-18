@@ -1,0 +1,29 @@
+=====
+SICER
+=====
+
+SICER first and foremost is a filtering tool. Its main functions are:
+
+- Delineation of the significantly ChIP-enriched regions, which can be used to associate with other genomic landmarks.
+- Identification of reads on the ChIP-enriched regions, which can be used for profiling and other quantitative analysis.
+
+
+
+Details
+-------
+
+By default, SICER creates files that do not conform to standards (e.g. BED files are closed, not half-open). This could have implications for downstream analysis. To force the output of SICER to be formatted properly to standard file formats, check the "Fix off-by-one errors in output files" option.
+
+
+References
+----------
+
+
+| *A clustering approach for identification of enriched domains from histone modification ChIP-Seq data*
+| C. Zang, D.E. Schones, C. Zeng, K. Cui, K. Zhao and W. Peng.
+| Bioinformatics (2009) 25 (15): 1952-1958.
+| http://bioinformatics.oxfordjournals.org/content/25/15/1952
+
+|
+|
+|

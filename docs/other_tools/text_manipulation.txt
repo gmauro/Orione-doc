@@ -1,0 +1,25 @@
+=================
+Text manipulation
+=================
+
+Data can be manipulated with the following toolsxxx:
+
+- Add column to an existing dataset
+- Compute an expression on every row
+- Concatenate datasets tail-to-head
+- Cut columns from a table
+- Merge Columns together
+- Convert delimiters to TAB
+- Create single interval as a new dataset
+- Change Case of selected columns
+- Paste two files side by side
+- Remove beginning of a file
+- Select random lines from a file
+- Select first lines from a dataset
+- Select last lines from a dataset
+- Trim leading or trailing characters
+- Line/Word/Character count of a dataset
+- Secure Hash / Message Digest on a dataset
+- Filter on ambiguities in polymorphism datasets
+- Arithmetic Operations on tables
+

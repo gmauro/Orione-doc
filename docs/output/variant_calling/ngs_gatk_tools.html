@@ -1,0 +1,193 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NGS: GATK tools &mdash; Orione 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Orione 0.1 documentation" href="../index.html" />
+    <link rel="up" title="Variant Calling" href="../variant_calling.html" />
+    <link rel="next" title="VCF tools" href="vcf_tools.html" />
+    <link rel="prev" title="NGS: SAM tools" href="ngs_sam_tools.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vcf_tools.html" title="VCF tools"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ngs_sam_tools.html" title="NGS: SAM tools"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
+          <li><a href="../variant_calling.html" accesskey="U">Variant Calling</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="ngs-gatk-tools">
+<h1>NGS: GATK tools<a class="headerlink" href="#ngs-gatk-tools" title="Permalink to this headline">¶</a></h1>
+<p><em>ALIGNMENT UTILITIES</em></p>
+<dl class="docutils">
+<dt><strong>Depth of Coverage</strong></dt>
+<dd>processes a set of bam files to determine coverage at different levels of partitioning and aggregation. Coverage can be analyzed per locus, per interval, per gene, or in total; can be partitioned by sample, by read group, by technology, by center, or by library; and can be summarized by mean, median, quartiles, and/or percentage of bases covered to or beyond a threshold. Additionally, reads and bases can be filtered by mapping or base quality score.</dd>
+<dt><strong>Print Reads from BAM files</strong></dt>
+<dd>can dynamically merge the contents of multiple input BAM files, resulting in merged output sorted in coordinate order.</dd>
+</dl>
+<p><em>REALIGNMENT</em></p>
+<dl class="docutils">
+<dt><strong>Realigner Target Creator</strong></dt>
+<dd>for use in local realignment, emits intervals for the Local Indel Realigner to target for cleaning. Ignores 454 reads, MQ0 reads, and reads with consecutive indel operators in the CIGAR string.</dd>
+<dt><strong>Indel Realigner</strong></dt>
+<dd>performs local realignment of reads based on misalignments due to the presence of indels. Unlike most mappers, this walker uses the full alignment context to determine whether an appropriate alternate reference (i.e. indel) exists and updates SAMRecords accordingly.</dd>
+</dl>
+<p><em>BASE RECALIBRATION</em></p>
+<dl class="docutils">
+<dt><strong>Count Covariates on BAM files</strong></dt>
+<dd>is designed to work as the first pass in a two-pass processing step. It does a by-locus traversal operating only at sites that are not in dbSNP. We assume that all reference mismatches we see are therefore errors and indicative of poor base quality. This walker generates tables based on various user-specified covariates (such as read group, reported quality score, cycle, and dinucleotide) Since there is a large amount of data one can then calculate an empirical probability of error given the particular covariates seen at this site, where p(error) = num mismatches / num observations The output file is a CSV list of (the several covariate values, num observations, num mismatches, empirical quality score) The first non-comment line of the output file gives the name of the covariates that were used for this calculation. Note: ReadGroupCovariate and QualityScoreCovariate are required covariates and will be added for the user regardless of whether or not they were specified Note: This walker is designed to be used in conjunction with TableRecalibrationWalker.</dd>
+<dt><strong>Table Recalibration on BAM files</strong></dt>
+<dd>is designed to work as the second pass in a two-pass processing step, doing a by-read traversal. For each base in each read this walker calculates various user-specified covariates (such as read group, reported quality score, cycle, and dinuc) Using these values as a key in a large hashmap the walker calculates an empirical base quality score and overwrites the quality score currently in the read. This walker then outputs a new bam file with these updated (recalibrated) reads. Note: This walker expects as input the recalibration table file generated previously by CovariateCounterWalker. Note: This walker is designed to be used in conjunction with CovariateCounterWalker.</dd>
+<dt><strong>Analyze Covariates</strong></dt>
+<dd>creates collapsed versions of the recal csv file and call R scripts to plot residual error versus the various covariates.</dd>
+</dl>
+<p><em>GENOTYPING</em></p>
+<dl class="docutils">
+<dt><strong>Unified Genotyper SNP and indel caller</strong></dt>
+<dd>is a variant caller which unifies the approaches of several disparate callers. Works for single-sample and multi-sample data. The user can choose from several different incorporated calculation models.</dd>
+</dl>
+<p><em>ANNOTATION</em></p>
+<dl class="docutils">
+<dt><strong>Variant Annotator</strong></dt>
+<dd>annotates variant calls with context information. Users can specify which of the available annotations to use.</dd>
+</dl>
+<p><em>FILTRATION</em></p>
+<dl class="docutils">
+<dt><strong>Variant Filtration on VCF files</strong></dt>
+<dd>filters variant calls using a number of user-selectable, parameterizable criteria.</dd>
+<dt><strong>Select Variants from VCF files</strong></dt>
+<dd>Often, a VCF containing many samples and/or variants will need to be subset in order to facilitate certain analyses (e.g. comparing and contrasting cases vs. controls; extracting variant or non-variant loci that meet certain requirements, displaying just a few samples in a browser like IGV, etc.). SelectVariants can be used for this purpose.</dd>
+</dl>
+<p><em>VARIANT QUALITY SCORE RECALIBRATION</em></p>
+<dl class="docutils">
+<dt><strong>Variant Recalibrator</strong></dt>
+<dd>takes variant calls as .vcf files, learns a Gaussian mixture model over the variant annotations and evaluates the variant &#8211; assigning an informative lod score.</dd>
+<dt><strong>Apply Variant Recalibration</strong></dt>
+<dd>applies cuts to the input vcf file (by adding filter lines) to achieve the desired novel FDR levels which were specified during VariantRecalibration.</dd>
+</dl>
+<p><em>VARIANT UTILITIES</em></p>
+<dl class="docutils">
+<dt><strong>Validate Variants</strong></dt>
+<dd>validates a variants file.</dd>
+<dt><strong>Eval Variants</strong></dt>
+<dd>is a general-purpose tool for variant evaluation (% in dbSNP, genotype concordance, Ti/Tv ratios, and a lot more).</dd>
+<dt><strong>Combine Variants</strong></dt>
+<dd>combines VCF records from different sources; supports both full merges and set unions. Merge: combines multiple records into a single one; if sample names overlap then they are uniquified. Union: assumes each rod represents the same set of samples (although this is not enforced); using the priority list (if provided), emits a single record instance at every position represented in the rods.</dd>
+</dl>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><em>A framework for variation discovery and genotyping using next-generation DNA sequencing data</em>.</div>
+<div class="line">M.A. DePristo, E. Banks, R. Poplin, K.V. Garimella, J.R. Maguire, C. Hartl, A.A. Philippakis, G. del Angel, M.A. Rivas, M. Hanna, A. McKenna, T.J. Fennell, A.M. Kernytsky, A.Y. Sivachenko, K. Cibulskis, S.B. Gabriel, D. Altshuler and M.J. Daly.</div>
+<div class="line">Nature Genetics (2011) 43, 491–498.</div>
+<div class="line"><a class="reference external" href="http://www.nature.com/ng/journal/v43/n5/full/ng.806.html">http://www.nature.com/ng/journal/v43/n5/full/ng.806.html</a></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NGS: GATK tools</a><ul>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ngs_sam_tools.html"
+                        title="previous chapter">NGS: SAM tools</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vcf_tools.html"
+                        title="next chapter">VCF tools</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/variant_calling/ngs_gatk_tools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="vcf_tools.html" title="VCF tools"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ngs_sam_tools.html" title="NGS: SAM tools"
+             >previous</a> |</li>
+        <li><a href="../index.html">Orione 0.1 documentation</a> &raquo;</li>
+          <li><a href="../variant_calling.html" >Variant Calling</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, CRS4 Bioinformatica.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+==============
+NGS: SAM tools
+==============
+
+
+Tools to manipulate SAM files:
+
+**Filter SAM**
+  allows parsing of SAM datasets using bitwise flag (the second column).
+
+**Convert SAM**
+  converts positional information from a SAM dataset into interval format with 0-based start and 1-based end. CIGAR string of SAM format is used to compute the end coordinate.
+
+**SAM-to-BAM**
+  produces an indexed BAM file based on a sorted input SAM file.
+
+**BAM-to-SAM**
+  produces a SAM file from a BAM file.
+
+**Merge BAM files**
+  uses the Picard merge command to merge any number of BAM files together into one BAM file while preserving the BAM metadata such as read groups.
+
+**MPileup SNP and indel caller**
+  generates BCF or pileup for one or multiple BAM files. Alignment records are grouped by sample identifiers in @RG header lines. If sample identifiers are absent, each input file is regarded as one sample.
+
+**Generate pileup**
+  uses SAMTools' pileup command to produce a pileup dataset from a provided BAM dataset. It generates two types of pileup datasets depending on the specified options.
+
+**Filter pileup on coverage and SNPs**
+  allows one to find sequence variants and/or sites covered by a specified number of reads with bases above a set quality threshold. The tool works on six and ten column pileup formats produced with SAMTools pileup command.
+
+**Pileup-to-Interval**
+  reduces the size of a results set by taking a pileup file and producing a condensed version showing consecutive sequences of bases meeting coverage criteria. The tool works on six and ten column pileup formats produced with SAMTools pileup command.
+
+**flagstat**
+  uses the SAMTools toolkit to produce simple stats on a BAM file.
+
+**rmdup**
+  removes potential PCR duplicates: if multiple read pairs have identical external coordinates, only retain the pair with highest mapping quality. In the paired-end mode, this command ONLY works with FR orientation and requires ISIZE is correctly set. It does not work for unpaired reads (e.g. two ends mapped to different chromosomes or orphan reads).
+
+**Slice BAM**
+  accepts an input BAM file and an input BED file and creates an output BAM file containing only those alignments that overlap the provided BED intervals.
+
+
+
+
+References
+----------
+
+| *The Sequence Alignment/Map format and SAMtools*.
+| H. Li, B. Handsaker, A. Wysoker, T. Fennell, J. Ruan, N. Homer, G. Marth, G. Abecasis, R. Durbin and 1000 Genome Project Data Processing Subgroup.
+| Bioinformatics (2009) 25 (16): 2078-2079. 
+| http://bioinformatics.oxfordjournals.org/content/25/16/2078
+
+|
+|
+|

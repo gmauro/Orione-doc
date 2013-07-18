@@ -1,0 +1,19 @@
+===============
+Convert formats
+===============
+
+
+- AXT to concatenated FASTA Converts an AXT formatted file to a concatenated FASTA alignment
+- AXT to FASTA Converts an AXT formatted file to FASTA format
+- BED to GFF converter
+- FASTA to Tabular converter
+- GFF to BED converter
+- MAF to BED Converts a MAF formatted file to the BED format
+- MAF to Interval Converts a MAF formatted file to the Interval format
+- MAF to FASTA Converts a MAF formatted file to FASTA format
+- Tabular to FASTA converts tabular file to FASTA format
+- FASTQ to FASTA converter
+- Wiggle to Interval converter
+- SFF converter 
+
+

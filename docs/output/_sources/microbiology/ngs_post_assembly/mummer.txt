@@ -1,0 +1,25 @@
+======
+MuMMer
+======
+
+MuMMer aligns a drfat sequence to a reference one. It also performes SNP detection. 
+
+
+Details
+-------
+
+It runs with default parameters, in the next release a fine tuning will be allowed.
+
+
+References
+----------
+
+| *Versatile and open software for comparing large genomes*.
+| S. Kurtz, A. Phillippy, A.L. Delcher, M. Smoot, M. Shumway, C. Antonescu and S.L. Salzberg.
+| Genome Biology 2004, 5:R12
+| http://genomebiology.com/2004/5/2/R12
+
+|
+|
+|
+

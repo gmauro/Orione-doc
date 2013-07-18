@@ -1,0 +1,41 @@
+===========
+NCBI BLAST+
+===========
+
+**NCBI BLAST+** available tools:
+
+*NCBI BLAST+ blastn*
+  Search nucleotide database with nucleotide query sequence(s).
+
+*NCBI BLAST+ blastp*
+  Search protein database with protein query sequence(s).
+
+*NCBI BLAST+ blastx*
+  Search protein database with translated nucleotide query sequence(s).
+
+*NCBI BLAST+ tblastn*
+  Search translated nucleotide database with protein query sequence(s).
+
+*NCBI BLAST+ tblastx*
+  Search translated nucleotide database with translated nucleotide query sequence(s).
+
+*BLAST XML to tabular*
+  Convert BLAST XML output to tabular.
+
+*NCBI BLAST+ database info*
+  Show BLAST database information from *blastdbcmd*.
+
+*NCBI BLAST+ blastdbcmd entry(s)*
+  Extract sequence(s) from BLAST database.
+
+*NCBI DustMasker*
+  Mask low complexity regions.
+
+*NCBI BLAST+ rpsblast*
+  Search protein domain database (PSSMs) with protein query sequence(s).
+
+*NCBI BLAST+ rpsblastn*
+  Search protein domain database (PSSMs) with translated nucleotide query sequence(s).
+
+*NCBI BLAST+ makeblastdb*
+  Make BLAST database.

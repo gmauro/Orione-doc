@@ -1,0 +1,12 @@
+========================
+Join, Subtract and Group
+========================
+
+
+- Join two Datasets side by side on a specified field
+- Compare two Datasets to find common or distinct rows
+- Subtract Whole Dataset from another dataset
+- Group data by a column and perform aggregate operation on other columns
+- Column Join 
+
+

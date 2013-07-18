@@ -1,0 +1,19 @@
+==============
+Extract Indels
+==============
+
+
+Given a SAM file containing indels, converts these to an interval file with a column indicating whether it is an insertion or a deletion, and then also can create a BED file for each type (one for insertions, one for deletions). The interval file can be combined with other like files to create a table useful for analysis with the Indel Analysis Table tool. The BED files can be useful for visualizing the reads.
+
+
+Details
+-------
+
+
+
+References
+----------
+
+|
+|
+|
