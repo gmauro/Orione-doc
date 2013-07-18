@@ -5,13 +5,9 @@ NGS: manipulation
 
 Tools to **manipulate NGS data in Galaxy@CRS4**:
 
-- *Paired-end trimming*
+- *FASTQ positional and quality trimming*
+- *Paired-end compositional filtering*
 - *Remove reads* from FastQ files
-- *Paired-end compositional trimming*
-
-**NGS QC TOOLKIT**
-
-- *NGS toolkit trimmer*
 
 **FASTX-TOOLKIT for FASTQ data**
 

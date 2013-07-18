@@ -13,9 +13,6 @@ Other available tools are:
 **MetaPhlAn to PhyloXML**
   converts the results of metagonome profiling performed with MetaPhlAn from tabular to PhyloXML format. The tool accepts as input only the result of rel_ab analysis (profiling in terms of relative abundaces), not reads_map or clade_profiles analysis.
 
-**MetaPhlAn to Krona**
-  converts the standard result file of MetaPhlAn in a zoomable pie chart using Krona.
-
 **Get Proteomes from MetaphlanOut**
   retrieves proteomes from NCBI of the genus and species indicated by a Metaphlan output file.
 
