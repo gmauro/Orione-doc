@@ -9,7 +9,7 @@ Tools to **manipulate NGS data in Galaxy@CRS4**:
 - *Remove reads* from FastQ files
 - *Paired-end compositional trimming*
 
-**NGS QX TOOLKIT**
+**NGS QC TOOLKIT**
 
 - *NGS toolkit trimmer*
 
@@ -24,6 +24,9 @@ Tools to **manipulate NGS data in Galaxy@CRS4**:
 - *Rename sequences*
 - *Reverse-complement*
 - *Trim sequences*
+
+**ILLUMINA FASTQ**
+
 - *FASTQ Groomer* converts between various FASTQ quality formats
 - *FASTQ splitter* on joined paired-end reads
 - *FASTQ joiner* on paired-end reads
